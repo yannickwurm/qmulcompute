@@ -17,7 +17,7 @@ The biocore mailing list is likely a good place for inspiration & advice.
 * Identify Scan for directories containing many small files that haven't been touched and should be compressed. Send email to admin with relvant user CC-ed. 
 * Scan for non-compressed non-binary files that haven't been touched in 1 month. Send email to admin with relvant user CC-ed. 
 
-### Filesystems - monthly
+## Filesystems - monthly
 
 * Determine every users disk usage (on all filesystems). Create summary for user info and potential billing. (Different filesystems have different costs).
 * Monitoring of web servers accessible externally. Need to check regularly (every 5 mins?) that all externally accessible webservers are up and running and non returning 404 errors. (antgenomes.org uses pingdom; there may be others).
@@ -25,13 +25,19 @@ The biocore mailing list is likely a good place for inspiration & advice.
 # OS/Software
 
 * Determine whether/how to move sm11 (and subsequent machines) to Ubuntu because it has more recent kernel & easily installable bio-packages than scientific linux currently being used on Apocrita. Hurdle: figuring out how to do things with regards to ITS so existing filesystems will (GPFS, sbcs-scratch) are available on a machine running Ubuntu (i.e. for what is outside the current core network). Perhaps with a specific bridge, or a different policy?
-* Establish shared software directory (this needs to happen regardless of whether there is an Ubunu migration or staying on scientific linux). Multiple versions need to be possible. Perhaps using 'modules'? Or perhaps with https://github.com/metalhelix/bio.brew or something else? 
+* Establish shared software directory (this needs to happen regardless of whether there is an Ubunu migration or staying on scientific linux). Multiple versions need to be possible. Perhaps using 'modules'? Or perhaps with https://github.com/metalhelix/bio.brew or something else?  Ideally all of it is tracked on github (similarly to brew?) for easy deployment & checking whats installed and what isn't
 
 # Hardware 
 
-* Can spend ~50,000 (?) as part of NERC EOS cloud award. Will need to be done in a manner that will make things compatible with other parts of EOS cloud. (Perhaps with help of VMWare). At least some of this should go to faster interconnects and/or backup solution? 
+* Can spend ~50,000 (?) as part of NERC EOS cloud award. Will need to be done in a manner that will make things compatible with other parts of EOS cloud. (Perhaps with help of VMWare). Approximate ideas: 
+   * Additional FAT nodes: one with faster CPU, the other with more RAM - all should have maxed out RAID5 internal scratch space. 
+   * faster interconnects (for SBCS-specific subnetwork)
+   * backup solution
+   * Utility server (for web servers, ftp up/download). 
 
 # Documentation & policies
+
+Some inspiration on FAQ and on [etherpad][1] 
 
 * Need clear guidelines for users on how to launch jobs (on sm11 or with queue), how to check things are running as planned, where to put files. 
 * Recommended intro to unix tutorials/books?
@@ -40,3 +46,5 @@ The biocore mailing list is likely a good place for inspiration & advice.
 * Set up "Helpdesk" forum to which all queries are directed - perhaps by using a stackoverflow clone? 
 * Need to clarify billing policy for grant applications. Computing, storage, admin time (latter depends on type of user), project-specific dev.
 
+
+[1]: https://etherpad.mozilla.org/qmulsbcsbioinfo
