@@ -27,6 +27,12 @@ The biocore mailing list is likely a good place for inspiration & advice.
 * Determine whether/how to move sm11 (and subsequent machines) to Ubuntu because it has more recent kernel & easily installable bio-packages than scientific linux currently being used on Apocrita. Hurdle: figuring out how to do things with regards to ITS so existing filesystems will (GPFS, sbcs-scratch) are available on a machine running Ubuntu (i.e. for what is outside the current core network). Perhaps with a specific bridge, or a different policy?
 * Establish shared software directory (this needs to happen regardless of whether there is an Ubunu migration or staying on scientific linux). Multiple versions need to be possible. Perhaps using 'modules'? Or perhaps with https://github.com/metalhelix/bio.brew or something else?  Ideally all of it is tracked on github (similarly to brew?) for easy deployment & checking whats installed and what isn't
 
+# Galaxy
+
+* Need it up and running and working and tested and fast. Ideally with same user names as for rest of cluster sutff. Maybe within a VM? 
+* Need repeatexplorer set up for Andrews' group.
+
+
 # Hardware 
 
 * Can spend ~50,000 (?) as part of NERC EOS cloud award. Will need to be done in a manner that will make things compatible with other parts of EOS cloud. (Perhaps with help of VMWare). Approximate ideas: 
@@ -46,5 +52,8 @@ Some inspiration on FAQ and on [etherpad][1]
 * Set up "Helpdesk" forum to which all queries are directed - perhaps by using a stackoverflow clone? 
 * Need to clarify billing policy for grant applications. Computing, storage, admin time (latter depends on type of user), project-specific dev.
 
+# Other
+
+* Once things are rolling, good idea to organize structured meetings with relevant users about their experience to identify additional areas for improvment. 
 
 [1]: https://etherpad.mozilla.org/qmulsbcsbioinfo
